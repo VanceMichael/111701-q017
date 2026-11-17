@@ -1,0 +1,8 @@
+{
+  "source": "sample-17",
+  "observedAt": "2026-11-17T08:00:00.000Z",
+  "items": [
+    {"id": "17-A", "label": "职业证照续期样例甲", "state": "active", "revision": 1},
+    {"id": "17-B", "label": "职业证照续期样例乙", "state": "pending", "revision": 1}
+  ]
+}
