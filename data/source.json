@@ -1,8 +1,64 @@
 {
   "source": "sample-17",
-  "observedAt": "2026-11-17T08:00:00.000Z",
-  "items": [
-    {"id": "17-A", "label": "职业证照续期样例甲", "state": "active", "revision": 1},
-    {"id": "17-B", "label": "职业证照续期样例乙", "state": "pending", "revision": 1}
+  "observedAt": "2026-11-18T08:00:00.000Z",
+  "pages": [
+    {
+      "source": "portal-east",
+      "observedAt": "2026-11-18T07:00:00.000Z",
+      "application": {"id": "A-1001", "memberId": "M-01", "round": 1, "state": "materials_required", "revision": 1},
+      "materials": [
+        {"id": "id-card", "state": "accepted", "comment": "在有效期内"},
+        {"id": "photo", "state": "missing", "comment": "未收到近期证件照"},
+        {"id": "employment-proof", "state": "missing", "comment": "未收到在职证明"}
+      ]
+    },
+    {
+      "source": "portal-west",
+      "observedAt": "2026-11-18T07:05:00.000Z",
+      "application": {"id": "A-2002", "memberId": "M-02", "round": 1, "state": "under_review", "revision": 1}
+    },
+    {
+      "source": "portal-north",
+      "observedAt": "2026-11-18T07:10:00.000Z",
+      "application": {"id": "A-3003", "memberId": "M-03", "round": 1, "state": "materials_required", "revision": 1},
+      "materials": [
+        {"id": "id-card", "state": "accepted"},
+        {"id": "photo", "state": "missing", "comment": "照片背景不符合要求"}
+      ]
+    },
+    {
+      "source": "portal-east",
+      "observedAt": "2026-11-18T07:20:00.000Z",
+      "error": "gateway timeout"
+    },
+    {
+      "source": "portal-north",
+      "observedAt": "2026-11-18T07:30:00.000Z",
+      "application": {"id": "A-3003", "memberId": "M-03", "round": 2, "state": "materials_required", "revision": 1}
+    },
+    {
+      "source": "portal-east",
+      "observedAt": "2026-11-18T07:40:00.000Z",
+      "application": {"id": "A-1001", "memberId": "M-01", "round": 2, "state": "under_review", "revision": 1},
+      "materials": [
+        {"id": "id-card", "state": "accepted"},
+        {"id": "photo", "state": "accepted", "comment": "补传已接收"},
+        {"id": "employment-proof", "state": "accepted", "comment": "补传已接收"}
+      ]
+    },
+    {
+      "source": "portal-east",
+      "observedAt": "2026-11-18T07:50:00.000Z",
+      "application": {"id": "A-1001", "memberId": "M-01", "round": 1, "state": "materials_required", "revision": 2},
+      "materials": [
+        {"id": "photo", "state": "missing", "comment": "未收到近期证件照"},
+        {"id": "employment-proof", "state": "missing", "comment": "未收到在职证明"}
+      ]
+    },
+    {
+      "source": "portal-west",
+      "observedAt": "2026-11-18T08:00:00.000Z",
+      "application": {"id": "A-2002", "memberId": "M-02", "round": 2, "state": "approved", "revision": 1}
+    }
   ]
 }
